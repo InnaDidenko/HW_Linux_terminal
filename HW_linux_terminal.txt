@@ -1,0 +1,97 @@
+﻿    Group 23
+    HW Linux terminal (GitBash) commands
+    Innesa Didenko
+    Ссылка на GitHub:
+
+
+ Для выполнения задания у меня:
+ установлен для Windows - GitBash;
+ Все шаги сценария выполняются в терминале GitBush.
+
+ 1) Посмотреть где я - 
+   pwd
+
+ 2) Создать папку - 
+   mkdir group_23
+
+ 3) Зайти в папку - 
+   cd group_23
+
+ 4) Создать 3 папки - 
+   mkdir inna_1 inna_2 inna_3
+
+ 5) Зайти в любую папку - 
+   cd inna_1
+
+ 6) Создать 5 файлов (3 txt, 2 json) - 
+   touch file1.txt  file2.txt file3.txt file4.json file5.json
+
+ 7) Создать 3 папки - 
+   mkdir didenko_1 didenko_2 didenko_3
+
+ 8) Вывести список содержимого папки - 
+   ls -la
+
+ 9)  + Открыть любой txt файл - 
+   vim file1.txt
+
+ 10) + написать туда что-нибудь, любой текст. - 
+    i Enter
+    пишем текст/цифры
+
+ 11) + сохранить и выйти - 
+    Escape :wq
+
+ 12) Выйти из папки на уровень выше - 
+    cd ..
+
+ 13) переместить любые 2 файла, которые вы создали, в любую другую папку - 
+    mv -v ./inna_1/{file1.txt,file2.txt} ./inna_1/didenko_1/
+
+ 14) скопировать любые 2 файла, которые вы создали, в любую другую папку - 
+    cp ./inna_1/didenko_1/{file1.txt,file2.txt} ./inna_2/
+
+ 15) Найти файл по имени - 
+    find . -iname "didenko_3*"
+
+ 16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает - 
+    cat file2.txt
+
+ 17) вывести несколько первых строк из текстового файла - 
+    head -n5 file1.txt
+
+ 18) вывести несколько последних строк из текстового файла - 
+    tail -n5 file1.txt
+
+ 19) просмотреть содержимое длинного файла (команда less) изучите как она работает - 
+    less file1.txt
+
+ 20) вывести дату и время - 
+    date
+
+
+  Задание*
+
+ 1) Отправить http запрос на сервер:
+    http://162.55.220.72:5005/terminal-hw-request :
+    curl 'http://162.55.220.72:5005/get_method?name=inna&age=31'
+
+ 2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13:
+    touch script.sh
+    chmod +x script.sh
+    vim script.sh
+    i Enter
+    pwd
+    mkdir group_23
+    cd group_23
+    mkdir inna_1 inna_2 inna_3
+    cd inna_1
+    touch file1.txt  file2.txt file3.txt file4.json file5.json
+    mkdir didenko_1 didenko_2 didenko_3
+    ls -la
+    mv -v ./inna_1/{file1.txt,file2.txt} ./inna_1/didenko_1/
+    (нажимаем Escape), “ :wq ”
+    ./script.sh
+
+
+
